@@ -1,0 +1,27 @@
+info:
+    project:
+        name: lunch-time
+
+server:
+    context-path: /lunch-time
+
+spring:
+    application:
+        name: lunch-time
+    main:
+        banner-mode: "off"
+    datasource:
+        type: com.zaxxer.hikari.HikariDataSource
+        url: jdbc:hsqldb:mem:dbcore;sql.syntax_mys=true
+        name: lunch
+        username: time
+        password:
+    jpa:
+        database-platform: org.hibernate.dialect.HSQLDialect
+    jackson:
+        default-property-inclusion: non_null
+        serialization:
+            fail_on_empty_beans: false
+management:
+    security:
+        enabled: false
